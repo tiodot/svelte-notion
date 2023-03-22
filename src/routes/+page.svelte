@@ -1,59 +1,34 @@
-<script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+<script lang="ts">
+	import { recordMapStore } from './store';
+	import NotionRender from './components/Render.svelte';
+	import type { PageData } from './$types';
+	export let data: PageData;
+
+	const { recordMap, title, site } = data;
+	recordMapStore.init(recordMap);
+	// console.log('recoardMapStore：', $recordMapStore);
+
+	if (typeof window !== 'undefined') {
+		(window as any).recordMap = recordMap;
+	}
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+	<meta name="robots" content="index,follow" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content={site.name} />
+	<meta property="twitter:domain" content={site.domain} />
+
+	<meta name="description" content={site.description} />
+	<meta property="og:description" content={site.description} />
+	<meta name="twitter:description" content={site.description} />
+
+	<meta property="og:title" content={title} />
+	<meta name="twitter:title" content={title} />
+	<title>{title}</title>
 </svelte:head>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
+<NotionRender />
