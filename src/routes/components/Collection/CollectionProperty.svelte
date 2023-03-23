@@ -18,6 +18,7 @@
 	export let inline = false;
 	export let linkToTitlePage = true;
 	export let pageHeader: boolean;
+	export let isInATag = false;
 
 	const isValid =
 		schema &&
@@ -75,11 +76,15 @@
 	<span class="notion-property notion-property-{schema.type}">
 		{#if schema.type === 'title'}
 			{#if block && linkToTitlePage}
-				<a href={actions.mapPageUrl(block.id)} class="notion-page-link">
+				<svelte:element
+					this={isInATag ? 'span' : 'a'}
+					href={actions.mapPageUrl(block.id)}
+					class="notion-page-link"
+				>
 					<PageTitle {block} />
-				</a>
+				</svelte:element>
 			{:else}
-				<Text value={data} {block} />
+				<Text {isInATag} value={data} {block} />
 			{/if}
 		{/if}
 		{#if componentsMap[schema.type]}
@@ -89,7 +94,8 @@
 				{schema}
 				{collection}
 				value={data}
-        {data}
+				{isInATag}
+				{data}
 				{...componentsExternalProps[schema.type] || {}}
 			/>
 		{/if}

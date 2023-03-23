@@ -15,6 +15,7 @@
 	export let block: Block;
 	export let linkProps;
 	export let linkProtocol;
+	export let isInATag = false;
 
 	const components = {
 		p: TextPage,
@@ -47,6 +48,7 @@
 				{linkProtocol}
 				{block}
 				{text}
+				{isInATag}
 				type={decorator[0]}
 			/>
 		{/each}

@@ -145,6 +145,7 @@
 				<CollectionProperty
 					propertyId={coverContent.propertyId}
 					schema={coverContent.schema}
+					isInATag={true}
 					data={coverContent.data}
 				/>
 			{/if}
@@ -158,6 +159,7 @@
 				schema={collection.schema.title}
 				data={block?.properties?.title}
 				{block}
+				isInATag={true}
 				{collection}
 			/>
 		</div>
@@ -167,6 +169,7 @@
 				<CollectionProperty
 					schema={property.schema}
 					data={property.data}
+					isInATag={true}
 					block={property.block}
 					collection={property.collection}
 					inline={property.inline}

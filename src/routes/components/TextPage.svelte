@@ -1,16 +1,19 @@
-<script>
-  import {actions, recordMapStore} from "../store";
-  import PageTitle from "./PageTitle.svelte";
+<script lang="ts">
+	import { actions, recordMapStore } from '../store';
+	import PageTitle from './PageTitle.svelte';
 
-  /** @type string */
-  export let value;
-  const linkedBlock = $recordMapStore.block[value]?.value;
+	// in <a> tag need to render as an <span>
+	export let isInATag: boolean;
 
-  const href = actions.mapPageUrl(value);
+	/** @type string */
+	export let value;
+	const linkedBlock = $recordMapStore.block[value]?.value;
+
+	const href = actions.mapPageUrl(value);
 </script>
 
 {#if linkedBlock}
-  <a class="notion-link" {href}>
-    <PageTitle block={linkedBlock}/>
-  </a>
+	<svelte:element this={isInATag ? 'span' : 'a'} {href} class="notion-link">
+		<PageTitle block={linkedBlock} />
+	</svelte:element>
 {/if}
