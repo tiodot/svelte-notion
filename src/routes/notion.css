@@ -916,6 +916,7 @@ svg.notion-page-icon {
 }
 
 .notion-code-copy-tooltip {
+	visibility: hidden;
 	pointer-events: none;
 	position: absolute;
 	bottom: -38px;

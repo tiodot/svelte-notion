@@ -61,14 +61,8 @@
 
 <pre class="notion-code"><div class="notion-code-copy"><div
 			class="notion-code-copy-button"
-			on:click={() => {
-				navigator.clipboard.writeText(content).then((res) => {
-					isCopied = true;
-					setTimeout(() => {
-						isCopied = false;
-					}, 1200);
-				});
-			}}><CopyIcon /></div>{#if isCopied}<div class="notion-code-copy-tooltip"><div>{isCopied ? 'Copied' : 'Copy'}</div></div>{/if}</div><code class="language-{language}">{@html htmlStr}</code>
+			data-action="copy"
+			data-content="{content}"><CopyIcon /></div><div class="notion-code-copy-tooltip"><div>Copied</div></div></div><code class="language-{language}">{@html htmlStr}</code>
 </pre>
 {#if caption}
 	<figcaption class="notion-asset-caption">
