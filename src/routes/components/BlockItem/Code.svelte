@@ -59,11 +59,10 @@
 	let isCopied = false;
 </script>
 
-<pre class="notion-code"><div class="notion-code-copy"><div
+<pre class="notion-code"><!--<div class="notion-code-copy"><div
 			class="notion-code-copy-button"
 			data-action="copy"
-			data-content="{content}"><CopyIcon /></div><div class="notion-code-copy-tooltip"><div>Copied</div></div></div><code class="language-{language}">{@html htmlStr}</code>
-</pre>
+			data-content="{content}"><CopyIcon /></div><div class="notion-code-copy-tooltip"><div>Copied</div></div></div> --><code class="language-{language}">{@html htmlStr}</code></pre>
 {#if caption}
 	<figcaption class="notion-asset-caption">
 		<Text value={caption} {block} />
