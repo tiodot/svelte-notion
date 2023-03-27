@@ -15,6 +15,8 @@
 	import ViewPage from './BlockItem/ViewPage.svelte';
 	import AssetWrapper from './AssetWrapper.svelte';
 	import BlockQuote from './BlockItem/Quote.svelte';
+	import BlockCallout from './BlockItem/Callout.svelte';
+	import Waiting from './BlockItem/Waiting.svelte';
 
 	export let block: Block;
 	export let level: number;
@@ -40,10 +42,7 @@
 		text: BlockText,
 		bulleted_list: BlockList,
 		numbered_list: BlockList,
-		//TODO: Embed
-		embed: BlockText,
-		code: BlockCode,
-		bookmark: BlockBookmark,
+		embed: AssetWrapper,
 		tweet: AssetWrapper,
 		maps: AssetWrapper,
 		pdf: AssetWrapper,
@@ -54,7 +53,27 @@
 		image: AssetWrapper,
 		gist: AssetWrapper,
 		video: AssetWrapper,
-		quote: BlockQuote
+		drive: AssetWrapper,
+		//audio
+		audio:  Waiting, 
+		file:  Waiting, 
+		equation:  Waiting, 
+		column_list:  Waiting, 
+		column: Waiting,
+		collection_view: Waiting,
+
+		code: BlockCode,
+		bookmark: BlockBookmark,
+		quote: BlockQuote,
+		callout: BlockCallout,
+		toggle: Waiting,
+		table_of_contents: Waiting,
+		to_do: Waiting,
+		transclusion_container: Waiting,
+		transclusion_reference: Waiting,
+		alias: Waiting,
+		table: Waiting,
+		external_object_instance: Waiting,
 	};
 	// console.log('--->', type)
 </script>
