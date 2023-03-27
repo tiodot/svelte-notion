@@ -17,6 +17,7 @@
 	import BlockQuote from './BlockItem/Quote.svelte';
 	import BlockCallout from './BlockItem/Callout.svelte';
 	import BlockAudio from './BlockItem/Audio.svelte'
+	import BlockFile from './BlockItem/File.svelte'
 	import Waiting from './BlockItem/Waiting.svelte';
 
 	export let block: Block;
@@ -57,7 +58,7 @@
 		drive: AssetWrapper,
 		//audio
 		audio:  BlockAudio, 
-		file:  Waiting, 
+		file:  BlockFile, 
 		equation:  Waiting, 
 		column_list:  Waiting, 
 		column: Waiting,
