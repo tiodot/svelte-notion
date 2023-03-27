@@ -830,7 +830,7 @@ svg.notion-page-icon {
 
 .notion-text {
 	width: 100%;
-	white-space: pre-wrap;
+	/* white-space: pre-wrap; */
 	word-break: break-word;
 	padding: 3px 2px;
 	margin: 1px 0;
