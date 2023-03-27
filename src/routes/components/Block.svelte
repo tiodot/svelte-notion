@@ -18,6 +18,8 @@
 	import BlockCallout from './BlockItem/Callout.svelte';
 	import BlockAudio from './BlockItem/Audio.svelte'
 	import BlockFile from './BlockItem/File.svelte'
+	import BlockColumn from './BlockItem/Column.svelte'
+	import BlockColumnList from './BlockItem/ColumnList.svelte'
 	import Waiting from './BlockItem/Waiting.svelte';
 
 	export let block: Block;
@@ -60,8 +62,8 @@
 		audio:  BlockAudio, 
 		file:  BlockFile, 
 		equation:  Waiting, 
-		column_list:  Waiting, 
-		column: Waiting,
+		column_list:  BlockColumnList, 
+		column: BlockColumn,
 		collection_view: Collection,
 
 		code: BlockCode,
