@@ -8,12 +8,12 @@ export default siteConfig({
 	rootNotionSpaceId: undefined,
 
 	// basic site info (required)
-	name: 'Do Not Evil',
-	domain: 'donotevil.com',
-	author: 'DoNotEvil',
+	name: 'Svelte Notion Blog',
+	domain: 'svelte-noiton.test.com',
+	author: 'svelte-noiton',
 
 	// open graph metadata (optional)
-	description: 'Do not evil, to be a better man',
+	description: 'svelte notion render',
 
 	// default notion icon and cover images for site-wide consistency (optional)
 	// page-specific values will override these site-wide defaults
@@ -43,5 +43,7 @@ export default siteConfig({
 	//   }
 	// ]
 
-	googleAnalytics: undefined
+	// root-relative path the must start, if you deploy on github, this may be useful
+	pathBase: '/svelte-notion' 
+
 });

@@ -64,10 +64,7 @@ export const navigationLinks: Array<NavigationLink | null> | null = getSiteConfi
 	null
 );
 
-export const googleAnalytics: string | null = getSiteConfig(
-	'googleAnalytics',
-	process.env.GOOGLE_ANALYTICS || null
-);
+export const pathBase: string | null = getSiteConfig('pathBase', null);
 
 // Optional site search
 export const isSearchEnabled: boolean = getSiteConfig('isSearchEnabled', false);

@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 const dev = process.argv.includes('dev');
+console.log('dev--->', dev)
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	compilerOptions: {
@@ -16,8 +17,10 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter({
 			fallback: '404.html',
-			base: dev ? '' : '/svelte-notion'
 		}),
+		paths: {
+			base: dev ? '' : '/svelte-notion'
+		}
 	}
 };
 

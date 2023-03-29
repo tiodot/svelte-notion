@@ -22,7 +22,7 @@ export interface SiteConfig {
 	navigationStyle?: types.NavigationStyle;
 	navigationLinks?: Array<NavigationLink>;
 
-	googleAnalytics?: string;
+	pathBase?: string;
 }
 
 export interface NavigationLink {
