@@ -64,8 +64,6 @@ export const navigationLinks: Array<NavigationLink | null> | null = getSiteConfi
 	null
 );
 
-export const pathBase: string | null = getSiteConfig('pathBase', null);
-
 // Optional site search
 export const isSearchEnabled: boolean = getSiteConfig('isSearchEnabled', false);
 

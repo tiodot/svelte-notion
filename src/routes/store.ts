@@ -3,8 +3,8 @@ import { writable, get } from 'svelte/store';
 import { parsePageId, uuidToId, getCanonicalPageId } from 'notion-utils';
 import type { Site } from '$lib/types';
 import { site } from '$lib/config';
-import { inversePageUrlOverrides, pathBase } from '$lib/config';
-
+import { inversePageUrlOverrides } from '$lib/config';
+import { base } from '$app/paths';
 // export const site = writable<Site>();
 
 function createRecordMap() {
@@ -37,7 +37,7 @@ export const actions = {
 			if (override) {
 				return `/${override}`;
 			} else {
-				return `${pathBase ? pathBase : ''}/${getCanonicalPageId(pageUuid, get(recordMapStore), { uuid })}`;
+				return `${base ? base : ''}/${getCanonicalPageId(pageUuid, get(recordMapStore), { uuid })}`;
 			}
 		}
 	}

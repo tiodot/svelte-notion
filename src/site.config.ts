@@ -43,7 +43,4 @@ export default siteConfig({
 	//   }
 	// ]
 
-	// root-relative path the must start, if you deploy on github, this may be useful
-	pathBase: '/svelte-notion' 
-
 });

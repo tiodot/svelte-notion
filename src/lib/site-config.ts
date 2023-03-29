@@ -20,9 +20,6 @@ export interface SiteConfig {
 	pageUrlAdditions?: types.PageUrlOverridesMap;
 
 	navigationStyle?: types.NavigationStyle;
-	navigationLinks?: Array<NavigationLink>;
-
-	pathBase?: string;
 }
 
 export interface NavigationLink {

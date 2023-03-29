@@ -19,7 +19,8 @@ const config = {
 			fallback: '404.html',
 		}),
 		paths: {
-			base: dev ? '' : '/svelte-notion'
+			base: dev ? '' : '/svelte-notion',
+			relative: false,
 		}
 	}
 };
