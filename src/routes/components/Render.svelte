@@ -14,9 +14,4 @@
   // console.log('block.content:', block.content);
 </script>
 
-<Block {level} {block} blockId={id}>
-	{#each block.content || [] as contentBlockId (contentBlockId)}
-		{@const contentBlock = $recordMapStore.block[contentBlockId].value}
-		<Block level={level + 1} blockId={contentBlockId} block={contentBlock} />
-	{/each}
-</Block>
+<Block {level} {block} blockId={id}></Block>
