@@ -54,7 +54,12 @@
 	const language = (block.properties?.language?.[0]?.[0] || defaultLanguage).toLowerCase();
 	const caption = block.properties.caption;
 
-	const htmlStr = Prism.highlight(content, Prism.languages[language], language);
+	let htmlStr = content;
+	try {
+		htmlStr = Prism.highlight(content, Prism.languages[language], language);
+	} catch(e) {
+		
+	}
 
 	let isCopied = false;
 </script>
