@@ -11,19 +11,19 @@ It uses Notion as a CMS, can be deployed to GitHub pages or Vercel;
 - Responsive for different devices
 
 ## Demos
-waiting...
+https://xchb.work/svelte-notion/
 
-
+![](2023-04-13-20-09-36.png)
 ## Setup
-All config is defined in site.config.ts.
+All config is defined in [site.config.ts](https://github.com/tiodot/svelte-notion/blob/main/src/site.config.ts).
 
 1. Fork / clone this repo
-2. Change a few values in site.config.ts
+2. Change a few values in [site.config.ts](https://github.com/tiodot/svelte-notion/blob/main/src/site.config.ts)
 3. npm install
 4. npm run dev to test locally
 5. npm run deploy to deploy to vercel 💪
 
-I tried to make configuration as easy as possible — All you really need to do to get started is edit rootNotionPageId.
+I tried to make configuration as easy as possible — All you really need to do to get started is edit **rootNotionPageId**.
 
 We recommend duplicating the [default page](https://tiodot.notion.site/5e19b09eec9e43c5b4c23031d41fea81) as a starting point, but you can use any public notion page you want.
 
