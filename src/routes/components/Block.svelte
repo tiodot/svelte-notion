@@ -16,10 +16,12 @@
 	import AssetWrapper from './AssetWrapper.svelte';
 	import BlockQuote from './BlockItem/Quote.svelte';
 	import BlockCallout from './BlockItem/Callout.svelte';
-	import BlockAudio from './BlockItem/Audio.svelte'
-	import BlockFile from './BlockItem/File.svelte'
-	import BlockColumn from './BlockItem/Column.svelte'
-	import BlockColumnList from './BlockItem/ColumnList.svelte'
+	import BlockAudio from './BlockItem/Audio.svelte';
+	import BlockFile from './BlockItem/File.svelte';
+	import BlockColumn from './BlockItem/Column.svelte';
+	import BlockColumnList from './BlockItem/ColumnList.svelte';
+	import BlockEOI from './BlockItem/EOI.svelte';
+	import BlockSyncPointer from './BlockItem/SyncPointerBlock.svelte'
 	import Waiting from './BlockItem/Waiting.svelte';
 
 	export let block: Block;
@@ -59,10 +61,10 @@
 		video: AssetWrapper,
 		drive: AssetWrapper,
 		//audio
-		audio:  BlockAudio, 
-		file:  BlockFile, 
-		equation:  Waiting, 
-		column_list:  BlockColumnList, 
+		audio: BlockAudio,
+		file: BlockFile,
+		equation: Waiting,
+		column_list: BlockColumnList,
 		column: BlockColumn,
 		collection_view: Collection,
 
@@ -74,10 +76,10 @@
 		table_of_contents: Waiting,
 		to_do: Waiting,
 		transclusion_container: Waiting,
-		transclusion_reference: Waiting,
+		transclusion_reference: BlockSyncPointer,
 		alias: Waiting,
 		table: Waiting,
-		external_object_instance: Waiting,
+		external_object_instance: BlockEOI
 	};
 	// console.log('--->', type)
 </script>

@@ -7,6 +7,7 @@
 	import TextPage from './TextPage.svelte';
 	import TextExternalLink from './TextExternalLink.svelte';
 	import TextLink from './TextLink.svelte';
+	import EOI from './BlockItem/EOI.svelte';
 	import GracefulImage from './GracefulImage.svelte';
 	import Equation from './Equation.svelte';
 
@@ -32,7 +33,7 @@
 		a: TextLink,
 		u: GracefulImage,
 		// TODO:
-		eoi: TextPlain
+		eoi: EOI, 
 	};
 </script>
 
@@ -49,6 +50,7 @@
 				{block}
 				{text}
 				{isInATag}
+				inline={true}
 				type={decorator[0]}
 			/>
 		{/each}
