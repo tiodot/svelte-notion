@@ -785,6 +785,7 @@ svg.notion-page-icon {
 	padding-inline-start: 1.6em;
 	margin-top: 0;
 	margin-bottom: 0;
+	max-width: 100%;
 }
 
 .notion-list-disc li {
